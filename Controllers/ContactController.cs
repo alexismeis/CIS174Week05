@@ -23,6 +23,7 @@ namespace MultiPageContactsMeis.Controllers
             return View("Edit", new Contact());
         }
 
+        // Pass a model to a view
         [HttpGet]
         public IActionResult Edit(int id)
         {

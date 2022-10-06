@@ -21,20 +21,19 @@ namespace MultiPageContactsMeis.Controllers
             return View(contacts);
         }
 
-        // default
-        public IActionResult About()
-        {
-            return Content("Home controller, About action");
-        }
-
-        //attribute
+        // Razor Views using View()
         [Route("Privacy")]
         public IActionResult Privacy()
         {
-            return Content("Home controller, Privacy action");
+            return View();
         }
 
-        //custom
+        // Razor Views using View(name)
+        public IActionResult OtherPrivacy()
+        {
+            return View("Privacy");
+        }
+        
         public IActionResult List(int num)
         {
             return Content("Home controller, List action, Page: " + num);

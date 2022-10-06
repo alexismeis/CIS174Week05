@@ -3,7 +3,14 @@
     ViewBag.Title = "My Contacts";
 }
 
-<h2>Contact List</h2>
+<h1>Contacts</h1>
+
+<!--Inline syntax-->
+@{
+    string message = "Welcome!";
+}
+
+<h2>@message</h2>
 
 <a asp-controller="Contact" asp-action="Add">Add New Contact</a>
 <table class="table table-bordered table striped">
@@ -17,6 +24,7 @@
         </tr>
     </thead>
     <tbody>
+        <!--Block syntax-->
         @foreach (var contact in Model)
             {
                 <tr>

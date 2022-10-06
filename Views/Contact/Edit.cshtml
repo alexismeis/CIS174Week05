@@ -1,4 +1,5 @@
-﻿@model Contact
+﻿<!--Bind Contact model to the Edit view-->
+@model Contact
 @{
     string title = ViewBag.Action + " Contact";
     ViewBag.Title = title;
@@ -6,6 +7,7 @@
 
 <h2>@ViewBag.Title</h2>
 
+<!--Reference model properties-->
 <form asp-action="Edit" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
 
